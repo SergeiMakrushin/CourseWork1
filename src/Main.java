@@ -32,7 +32,7 @@ public class Main {
     public static void employeeMinSalary(Employee[] information) {
         int minSalary = 100000000;
         for (int i = 0; i < information.length; i++) {
-            if (information[i] != null) if (information[i].getSalaryEmployee() < minSalary) {
+            if (information[i] != null && information[i].getSalaryEmployee() < minSalary) {
                 minSalary = information[i].getSalaryEmployee();
             }
         }
@@ -42,10 +42,11 @@ public class Main {
     public static void employeeMaxSalary(Employee[] information) {
         int maxSalary = -1;
         for (int i = 0; i < information.length; i++) {
-            if (information[i] != null && information[i].getSalaryEmployee() > maxSalary){
+            if (information[i] != null && information[i].getSalaryEmployee() > maxSalary) {
                 maxSalary = information[i].getSalaryEmployee();
             }
-        }        System.out.println("Максимальная зарплата = " + maxSalary);
+        }
+        System.out.println("Максимальная зарплата = " + maxSalary);
     }
 
     public static void fullnameEmployees(Employee[] information) {
