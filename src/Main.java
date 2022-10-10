@@ -42,11 +42,10 @@ public class Main {
     public static void employeeMaxSalary(Employee[] information) {
         int maxSalary = -1;
         for (int i = 0; i < information.length; i++) {
-            if (information[i] != null) if (information[i].getSalaryEmployee() > maxSalary) {
+            if (information[i] != null && information[i].getSalaryEmployee() > maxSalary){
                 maxSalary = information[i].getSalaryEmployee();
             }
-        }
-        System.out.println("Максимальная зарплата = " + maxSalary);
+        }        System.out.println("Максимальная зарплата = " + maxSalary);
     }
 
     public static void fullnameEmployees(Employee[] information) {
@@ -58,6 +57,7 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Hello world!");
+
         Employee employee = new Employee("Ivanov Oleg Michailovich", 1, 30000);
         Employee employee2 = new Employee("Sidorov Ivan Olegovich", 2, 40000);
         Employee employee3 = new Employee("Petrov Michail Ivanovich", 3, 50000);
