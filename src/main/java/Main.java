@@ -52,19 +52,19 @@ public class Main {
     public static void fullnameEmployees(Employee[] information) {
         for (int i = 0; i < information.length; i++)
             if (information[i] != null) {
-                System.out.println("Ф. И. О. сотрудника: " + information[i].getFullNameEmployee());
+                System.out.println("данные сотрудника: " + information[i].getSurnameEmployee()+" "+information[i].getNameEmployee());
             }
     }
 
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
-        Employee employee = new Employee("Ivanov Oleg Michailovich", 1, 30000);
-        Employee employee2 = new Employee("Sidorov Ivan Olegovich", 2, 40000);
-        Employee employee3 = new Employee("Petrov Michail Ivanovich", 3, 50000);
-        Employee employee4 = new Employee("Esenin Sergei Alexandrovich", 4, 60000);
-        Employee employee5 = new Employee("Puchkin Alexandr Segeevich", 5, 70000);
-
+        Employee employee = new Employee("Ivanov", "Oleg",1, 30000);
+        Employee employee2 = new Employee("Sidorov","Ivan", 2, 40000);
+        Employee employee3 = new Employee("Petrov","Michail", 3, 50000);
+        Employee employee4 = new Employee("Esenin","Sergei", 4, 60000);
+        Employee employee5 = new Employee("puchkin","alexandr", 5, 70000);
+//puchkin
         employees[0] = employee;
         employees[1] = employee2;
         employees[2] = employee3;
@@ -83,6 +83,8 @@ public class Main {
         employeeMaxSalary(employees);
 
         fullnameEmployees(employees);
+
+        System.out.println("employee5.getId() = " + employee5.getId());
 
     }
 
